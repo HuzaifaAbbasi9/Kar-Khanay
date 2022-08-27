@@ -51,3 +51,9 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+.container {
+    background: red;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
