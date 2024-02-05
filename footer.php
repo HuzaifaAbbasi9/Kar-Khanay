@@ -2,7 +2,7 @@
     <div class="container-fluid p-0">
         <div class="row">
             <div class="col-lg-2 footer-item">
-                <h5 class="footer-heading">Categories</h5>
+                <h5 class="footer-heading">Categories<i class="fa-solid fa-chevron-down show-on-lg"></i></h5>
                 <ul>
                     <li><a href="#"><h5>Women Fashion</h5></a></li>
                     <li><a href="#"><h5>Mobile Phones</h5></a></li>
@@ -14,7 +14,7 @@
                 </ul>
             </div>
             <div class="col-lg-3 footer-item">
-                <h5 class="footer-heading">About</h5>
+                <h5 class="footer-heading">About<i class="fa-solid fa-chevron-down show-on-lg"></i></h5>
                 <ul>
                     <li><a href="#"><h5>Adress: <span>St no,Road no,area,country</span></h5></a></li>
                     <li><a href="#"><h5>Phone: <span>0300-1234567</span></h5></a></li>
@@ -23,7 +23,7 @@
                 </ul>
             </div>
             <div class="col-lg-2 footer-item">
-                <h5 class="footer-heading">Support</h5>
+                <h5 class="footer-heading">Support<i class="fa-solid fa-chevron-down show-on-lg"></i></h5>
                 <ul>
                     <li><a href="#"><h5>Help</h5></a></li>
                     <li><a href="#"><h5>Support Us</h5></a></li>
@@ -32,7 +32,7 @@
                 </ul>
             </div>
             <div class="col-lg-2 footer-item">
-                <h5 class="footer-heading">Community</h5>
+                <h5 class="footer-heading">Community<i class="fa-solid fa-chevron-down show-on-lg"></i></h5>
                 <ul>
                     <li><a href="#"><h5>Community</h5></a></li>
                     <li><a href="#"><h5>Community</h5></a></li>
@@ -130,7 +130,6 @@
     </div>
 </footer>
 
-<script src=" assets/js/jquery.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>

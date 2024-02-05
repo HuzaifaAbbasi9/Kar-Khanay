@@ -1,0 +1,36 @@
+.all-seller-text {
+    border: 1px solid #000;
+    padding: 20px 20px 0;
+    text-align: center;
+    border-top: 0;
+}
+
+.all-seller-text h4 {
+    font-weight: 400;
+    color: #404145;
+}
+
+.all-seller-text .main_para {
+    color: #404145;
+    margin: 10px 0;
+}
+
+.all-seller-text img {
+    margin-bottom: 8px;
+    height: 19px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.all-seller-text .main_btn {
+    position: relative;
+    bottom: -19px;
+    min-width: 82%;
+    justify-content: center;
+}
+
+.all-seller-text .main_btn:hover {
+    background-color: #BBE783FF;
+    opacity: 1 !important;
+}

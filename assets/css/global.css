@@ -1,0 +1,277 @@
+/* < --  Compare Wrapper  -- > */
+.compare_wrapper {
+    padding: 1.1rem 4.6rem;
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    border-radius: 3px;
+    margin-top: 2rem;
+}
+
+.compare_wrapper h6, .compare_wrapper table th, .compare_wrapper table td {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.compare_wrapper table th {
+    border-bottom-width: 1px;
+}
+
+.compare_wrapper table th:nth-of-type(1) {
+    min-width: 200px;
+}
+
+.compare_wrapper table tr td:nth-of-type(1),
+.compare_wrapper table tr td:nth-of-type(2) {
+    min-width: 400px;
+    max-width: 500px;
+}
+
+.text-green {
+    color: var(--green);
+}
+
+.bf_account_sec {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bf_account_wrapper.account_form_wrapper {
+    max-width: 500px;
+}
+
+.bf_account_sec.bf_become_seller_wrapper {
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.bf_account_wrapper {
+    max-width: 430px;
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+    border: 1px solid #C8C9CC;
+    box-shadow: 0 0 1px rgb(0 0 0 / 20%);
+}
+
+.account_form .main_btn,
+.reset_popup_wrapperTop .main_btn {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.reset_popup_wrapperTop input,
+.account_form input,
+.account_form .form-check-label {
+    color: #95979D;
+    font-size: 13px;
+}
+
+.account_form .country_code,
+.account_form label {
+    color: #404145;
+    font-size: 13px;
+}
+
+.account_form .country_code {
+    background-color: transparent;
+}
+
+.account_form .form-check-label {
+    cursor: pointer;
+}
+
+.account_form .form-check-label .form-check-input {
+    transform: scale(1.2);
+}
+
+.account_form input:not(.form-check-input), .reset_popup_wrapperTop input {
+    height: 43px;
+    line-height: 43px;
+}
+
+.account_form:not(.become_seller) .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.account_form .forget_btn {
+    color: var(--green);
+    font-size: 13px;
+}
+
+.account_form_footer {
+    text-align: center;
+}
+
+.account_form_footer .main_para {
+    font-size: 13px;
+    color: #95979D;
+}
+
+.account_form_footer .main_para a {
+    color: var(--green);
+}
+
+.brand_details {
+    position: relative;
+}
+
+.brand_details_hero .custom-slider.owl-theme .owl-nav.disabled + .owl-dots {
+    bottom: 1.6rem;
+}
+
+.brand_details_wrapper {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.brand_details_wrapper .brand_details_logo {
+    width: 80px;
+}
+
+.brand_details_wrapper .start_svgrepo_img {
+    height: 20px;
+}
+
+.brand_details_tabs {
+    margin-top: 50px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #C8C9CC;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.brand_details_tabs button {
+    font-size: 25px;
+    color: #404145;
+    position: relative;
+    font-weight: 500;
+    text-align: center;
+}
+
+.brand_details_tabs button span {
+    position: relative;
+    display: inline-block;
+    padding: 0px 26px;
+}
+
+.brand_details_tabs button span::after {
+    content: '';
+    position: absolute;
+    bottom: -12.5px;
+    width: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: var(--green);
+    transition: all linear .2s;
+}
+
+.brand_details_tabs button:hover span::after,
+.brand_details_tabs button.active span::after {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .brand_details_page .product_grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .brand_details_tabs {
+        margin-top: 36px;
+    }
+
+    .brand_details_tabs button {
+        font-size: 16px;
+    }
+
+    .brand_details_tabs button span {
+        padding: 0px 15px;
+    }
+
+    .brand_details_hero .hero_slider.owl-carousel .owl-item img {
+        min-height: 230px;
+    }
+}
+
+@media (max-width: 450px) {
+    .brand_details_tabs button {
+        font-size: 14px;
+    }
+
+    .brand_details_tabs button span {
+        padding: 0px 10px;
+    }
+
+    .brand_details_hero .hero_slider.owl-carousel .owl-item img {
+        min-height: 40vw;
+    }
+}
+
+.brand_details_page .product_grid a.product_item {
+    transition: color linear .3s;
+}
+
+.brand_details_page:not(.show) {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .compare_wrapper {
+        padding: 0;
+        box-shadow: unset;
+        border-radius: 0px;
+        margin-top: 0rem;
+    }
+
+    .compare_table {
+        margin-top: 1.5rem;
+    }
+
+    .compare_table table {
+        table-layout: unset;
+    }
+
+    .bf_account_sec {
+        min-height: fit-content;
+    }
+
+    .bf_account_sec.bf_become_seller_wrapper {
+        row-gap: 1.8rem;
+    }
+}
+
+.flash-deal-item-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    margin: 25px 0 60px;
+}
+
+.flash-deal-item-counter .main_btn {
+    padding: 5px 8px;
+    font-size: 17px;
+}
+
+@media (max-width: 500px) {
+    .flash-deal-item-counter {
+        margin: 16px 0 30px;
+    }
+
+    .flash-deal-item-counter .main_btn {
+        font-size: 12px;
+    }
+}
+
+.card_img {
+    height: 15px;
+    width: auto;
+}

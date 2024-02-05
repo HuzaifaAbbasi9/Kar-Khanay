@@ -1,0 +1,1086 @@
+/*<------- Dashboard Main -------->*/
+.dashboard_main {
+    --dashborad-color: #f5f5f5;
+    background-color: var(--dashborad-color);
+}
+
+.dashboard_navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #C8C9CC;
+    column-gap: 40px;
+    max-width: 90%;
+}
+
+.dashboard_navigationLink {
+    display: block;
+    padding-bottom: 7px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--txt-color);
+    position: relative;
+}
+
+.dashboard_navigationLink:hover,
+.dashboard_navigationLink.active {
+    color: var(--green);
+}
+
+.dashboard_navigationLink::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1.7px;
+    width: 0;
+    height: 2px;
+    background-color: var(--green);
+    transition: width linear .3s;
+}
+
+.dashboard_navigationLink.active::before,
+.dashboard_navigationLink:hover:before {
+    width: 100%;
+}
+
+.dashboard_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.dashboard_wrapperItem {
+    padding: 25px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 13px -7px rgb(0 0 0 / 10%);
+}
+
+.dashboard_ItemImg {
+    padding: 20px 10px;
+    background-color: var(--green);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    --dashborad-itemImgSize: 95px;
+    width: var(--dashborad-itemImgSize);
+    border-radius: 5px;
+}
+
+.dashboard_ItemImg img {
+    height: 35px;
+    width: auto;
+}
+
+.dashboard_ItemText {
+    flex: 1;
+    text-align: right;
+}
+
+.dashboard_ItemText h5 {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.dashboard_ItemText h5,
+.dashboard_ItemText .main_para {
+    color: #404145;
+}
+
+.dashboardWrapperProfile {
+    border-radius: 5px;
+    background-color: var(--green);
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    column-gap: 18px;
+}
+
+.dashboardWrapperProfileText {
+    flex: 1;
+}
+
+.dashboardWrapperProfileText h5 {
+    color: var(--white);
+    margin-bottom: 3px;
+}
+
+.dashboardWrapperProfile img {
+    height: 70px;
+    width: auto;
+}
+
+.dashboardContent {
+    background-color: var(--white);
+    padding: 40px 0;
+    box-shadow: 0 0 13px -7px rgb(0 0 0 / 10%);
+    border: 1px solid rgb(0 0 0 / 10%);
+    height: 100%;
+}
+
+.dashboardContent.h-auto {
+    height: auto;
+}
+
+.dashboardContent .dashboardContentHeading {
+    padding: 10px 30px;
+    border-top: 1px solid #C8C9CC;
+    border-bottom: 1px solid #C8C9CC;
+    background-color: var(--dashborad-color);
+    color: #404145;
+    text-transform: capitalize;
+}
+
+.dashboardContentBody {
+    padding: 20px 30px 0;
+}
+
+.dashboardContentBody .main_para {
+    color: var(--black);
+}
+
+.dashboardContentBody.right img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.dashboardContentBody.right h5 {
+    color: var(--blue);
+    margin: 15px 0;
+}
+
+@media (max-width: 1200px) {
+    .dashboard_wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboard_navigation {
+        max-width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        justify-content: flex-start;
+    }
+
+    .dashboard_navigation::-webkit-scrollbar {
+        display: none;
+    }
+
+    .dashboard_navigationLink {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .dashboardContent {
+        background-color: var(--white);
+        padding: 0px 0 30px;
+        height: fit-content;
+    }
+
+    .dashboardContent .dashboardContentHeading {
+        border-top: none;
+        padding: 15px 15px;
+        background-color: var(--white);
+    }
+
+    .dashboardContentBody {
+        padding: 15px 15px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard_wrapperItem {
+        padding: 15px;
+        flex-direction: column;
+        row-gap: 15px;
+        border-radius: 5px;
+    }
+
+    .dashboard_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .dashboardWrapperProfile {
+        flex-direction: column;
+        row-gap: 15px;
+        text-align: center;
+    }
+
+    .dashboard_ItemImg {
+        padding: 18px;
+        --dashborad-itemImgSize: 70px;
+        width: var(--dashborad-itemImgSize);
+        border-radius: 50%;
+        height: var(--dashborad-itemImgSize);
+    }
+
+    .dashboard_ItemImg img {
+        height: auto;
+    }
+
+    .dashboardContentBody.right img {
+        width: 80px;
+    }
+}
+
+.dashboard_table {
+    position: relative;
+    padding: 5px 28px;
+}
+
+.dashboard_table .table.table-borderless td.code {
+    color: var(--green);
+}
+
+.table.table-borderless th,
+.table.table-borderless td {
+    border: none !important;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 13px;
+    color: #404145;
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+.table.table-borderless .table_unpaid {
+    padding: 3px 8px;
+    border-radius: 3px;
+    color: var(--white);
+    background-color: var(--red);
+    max-width: fit-content;
+    min-width: 51px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.table.table-borderless .table_unpaid.paid {
+    background-color: var(--green);
+}
+
+.table.table-borderless .dashboard_table_buttons {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 5px;
+}
+
+.table.table-borderless .dashboard_table_buttons button,
+.table.table-borderless .dashboard_table_buttons a {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}
+
+.table.table-borderless .dashboard_table_buttons button.delete,
+.table.table-borderless .dashboard_table_buttons a.delete {
+    background-color: rgb(239, 72, 106, 50%);
+    color: var(--red);
+}
+
+.table.table-borderless .dashboard_table_buttons button.view,
+.table.table-borderless .dashboard_table_buttons a.view {
+    background-color: rgb(142, 198, 63, 50%);
+    color: #8EC63F;
+}
+
+.table.table-borderless .dashboard_table_buttons button.download,
+.table.table-borderless .dashboard_table_buttons a.download {
+    color: #FFC955;
+    background-color: rgb(255, 201, 85, 50%);
+}
+
+.table.table-borderless .dashboard_table_buttons button img {
+    height: 11px;
+    width: auto;
+}
+
+div#dashboardTableDelete {
+    max-width: 300px;
+    padding: 15px;
+}
+
+div#dashboardTableDelete .main_para {
+    font-size: 15px;
+    text-align: center;
+}
+
+div#dashboardTableDelete .main_btn {
+    max-width: fit-content;
+    margin-left: 15px;
+}
+
+.color_green, .color_green:hover, .table.table-borderless td.color_green {
+    color: var(--green);
+}
+
+.close_popup.close_popup_arrow {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 19px;
+    line-height: 1;
+    height: 30px;
+    width: 30px;
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.dashboardContentBody.custom_table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.dashboard_conversations_wrapper {
+    position: relative;
+    padding: 25px 0;
+}
+
+.dashboard_conversations_item {
+    position: relative;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.dashboard_conversations_itemLeft {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.dashboard_conversations_itemLeft img {
+    height: 65px;
+    width: auto;
+}
+
+.dashboard_conversations_item h5,
+.dashboard_conversations_item .main_para {
+    color: #404145;
+    font-size: 15px;
+}
+
+.dashboard_conversations_item button {
+    border-radius: 50%;
+    height: 55px;
+    width: auto;
+    margin-left: auto;
+}
+
+.dashboard_conversations_item button img {
+    height: 100%;
+    width: auto;
+}
+
+.dashboard_conversations_product {
+    padding: 18px 30px 10px;
+}
+
+.dashboard_conversations_productWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.dashboard_productWrapperImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #C8C9CC;
+}
+
+.dashboard_productWrapperText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.dashboard_productWrapperHeading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard_productWrapperHeading img {
+    height: 50px;
+    width: auto;
+}
+
+.dashboard_productWrapperText .product_price {
+    display: flex;
+    column-gap: 10px;
+}
+
+.dashboard_productWrapperText .main_btn {
+    max-width: 150px;
+    background-color: var(--black);
+    border: none !important;
+}
+
+.main_para_custom_width {
+    max-width: 75%;
+    color: #C5C6C9;
+}
+
+.dashboard_conversations_main {
+    padding-left: 18px;
+}
+
+.dashboard_conversations_chat {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.dashboard_conversations_chatLeft {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    max-width: fit-content;
+}
+
+.conversations_chatProfile {
+    --profileSize: 45px;
+    height: var(--profileSize);
+    width: var(--profileSize);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green);
+    font-size: 17px;
+    text-transform: uppercase;
+    color: var(--white);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.conversations_chatProfile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+}
+
+.dashboard_conversations_chatLeft .chatLine {
+    width: 1px;
+    background-color: #E4E5E7;
+    flex: 1;
+}
+
+.dashboard_conversations_chatRight {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.dashboard_conversations_chatRight h4.main_para {
+    padding: 10px 15px 10px 0;
+    border-bottom: 1px solid #E4E5E7;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.dashboard_conversations_chatRight h4.main_para i {
+    font-size: 14px;
+}
+
+.dashboard_conversations_chatRight p.main_para {
+    padding: 13px 40px 13px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #E4E5E7;
+}
+
+.dashboard_user_status {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: 25px;
+    align-items: center;
+    color: var(--green);
+    font-size: 13px;
+}
+
+.dashboard_user_status span {
+    padding: 0px 10px;
+}
+
+.dashboard_user_status span:nth-of-type(1) {
+    border-right: 1px solid #707070;
+}
+
+.dashboard_chat_textarea {
+    position: relative;
+    padding-right: 18px;
+}
+
+.dashboard_chat_textarea textarea {
+    resize: none;
+    padding: 13px 20px;
+    color: var(--green) !important;
+}
+
+.dashboard_chat_textarea textarea::placeholder {
+    color: var(--green);
+}
+
+.dashboard_chat_textareaProp {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    max-width: fit-content;
+}
+
+.dashboard_chat_textareaProp img {
+    height: 17px;
+    width: auto;
+}
+
+#createOffer {
+    max-width: 800px;
+}
+
+.createOfferHeading {
+    padding: 14px 25px;
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 20px;
+    color: #404145;
+}
+
+.createOfferHeading .close_popup i {
+    font-size: 30px;
+}
+
+.createOfferHeading .fa-angle-left {
+    font-size: 17px;
+}
+
+.createOfferBody {
+    padding: 30px 25px;
+}
+
+.createOfferBody .Text {
+    font-weight: 400;
+    max-width: 440px;
+    line-height: 1.4;
+}
+
+.createOfferWrapper {
+    margin-top: 20px;
+    display: flex;
+    column-gap: 20px;
+}
+
+.createOfferWrapperImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #C8C9CC;
+    max-width: 270px;
+}
+
+.createOfferWrapperTextarea {
+    flex: 1;
+    position: relative;
+}
+
+.defineOfferTOS {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: end;
+    gap: 15px;
+    padding: 20px;
+    background-color: #EFEFF0;
+}
+
+.defineOfferTOS select.form-control:not([size]):not([multiple]),
+.defineOfferTOS .form-control {
+    height: 45px;
+    line-height: 45px;
+    border-radius: 0px !important;
+}
+
+.defineOfferTOS .main_btn {
+    width: 100%;
+    max-width: 100%;
+}
+
+.createTicketWrapper {
+    max-width: 260px;
+    width: 100%;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 30px auto 50px;
+    box-shadow: 0 0 13px -7px rgb(0 0 0 / 10%);
+    border: 1px solid rgb(0 0 0 / 10%);
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.createTicketWrapper .icon {
+    --iconSize: 45px;
+    height: var(--iconSize);
+    width: var(--iconSize);
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 22px;
+}
+
+.createTicketWrapper .main_para {
+    color: var(--green);
+}
+
+.dashboard_conversations_chatRightItem p.main_para {
+    position: relative;
+}
+
+.chat_attachment {
+    background-color: #e9ecf1;
+    padding: 3px 8px;
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+}
+
+.dashboard_manage_profile {
+    max-width: 700px;
+}
+
+.dashboard_OfferWrapper {
+    max-width: 540px;
+    border: 1px solid #C5C6C9;
+    margin: 25px 0 30px;
+}
+
+.dashboard_OfferWrapperHeader {
+    padding: 10px 20px;
+    background-color: #F5F5F5;
+}
+
+.dashboard_OfferWrapperHeader h4 {
+    max-width: 450px;
+    width: 100%;
+    margin-bottom: 0 !important;
+}
+
+.dashboard_OfferWrapperBody {
+    padding: 20px;
+}
+
+.dashboard_OfferWrapperBodyTop {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #707070;
+}
+
+.dashboard_OfferWrapperBodyTop img {
+    width: 120px;
+    height: auto;
+}
+
+.dashboard_OfferWrapperBodyTop div {
+    flex: 1;
+    padding-left: 15px;
+}
+
+.dashboard_OfferWrapperBodyTop div h5,
+.dashboard_OfferWrapperBodyTop div .main_para {
+    color: #74767E;
+}
+
+.dashboard_OfferWrapperBodyBottom {
+    padding: 9px 0 30px;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard_OfferWrapperBodyBtns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+@media (min-width: 992px) {
+    .h-lg-100 {
+        height: 100% !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboardContentBody.custom_table {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .dashboard_conversations_item {
+        padding: 0 15px;
+    }
+
+    .dashboardContent.h-auto.mt-4.left {
+        padding-top: 30px;
+    }
+
+    #createOffer {
+        max-width: calc(100% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard_table table thead {
+        display: none;
+    }
+
+    .dashboard_table {
+        padding: 5px 15px;
+    }
+
+    .dashboard_table table tr {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid var(--black);
+        padding: 1px;
+    }
+
+    .dashboard_table table tr:nth-last-of-type(1) {
+        border-bottom: none !important;
+    }
+
+    .dashboard_table table td[data-label] {
+        display: flex;
+        font-weight: bold;
+    }
+
+    .dashboard_table table td[data-label]::before {
+        content: attr(data-label);
+        color: lightgrey;
+        font-weight: 500;
+        width: 50%;
+    }
+
+    .table.table-borderless .dashboard_table_buttons {
+        justify-content: flex-start;
+    }
+
+    .dashboard_conversations_item div.mx-auto {
+        display: none !important;
+    }
+
+    .dashboard_conversations_itemLeft img {
+        height: 50px;
+    }
+
+    .dashboard_conversations_item h5,
+    .dashboard_conversations_item .main_para {
+        font-size: 13px;
+    }
+
+    .dashboard_conversations_item button {
+        height: 35px;
+    }
+
+    .dashboard_conversations_wrapper {
+        padding: 15px 0 0;
+    }
+
+    .dashboard_conversations_productWrapper {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+    }
+
+    .createOfferBody {
+        padding: 20px 15px;
+    }
+
+    .createOfferBody .Text {
+        max-width: 100%;
+    }
+
+    .createOfferWrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 22px;
+    }
+
+    .main_para_custom_width {
+        max-width: 100%;
+    }
+
+    .dashboard_productWrapperHeading img {
+        height: 36px;
+    }
+
+    .dashboard_conversations_product {
+        padding: 15px 20px 10px;
+    }
+
+    .dashboard_productWrapperText {
+        row-gap: 10px;
+    }
+
+    .dashboard_productWrapperText .main_btn {
+        max-width: 100%;
+    }
+
+    .conversations_chatProfile {
+        --profileSize: 34px;
+        font-size: 14px;
+    }
+
+    .createOfferWrapperTextarea {
+        flex: unset;
+        width: 100%;
+    }
+
+    .dashboard_chat_textarea textarea {
+        min-height: 160px;
+    }
+
+    .createOfferWrapperImg {
+        max-width: 500px;
+    }
+
+    .dashboard_chat_textarea {
+        padding-right: 0px;
+    }
+
+    .defineOfferTOS {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+    }
+
+    .dashboard_conversations_main {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .dashboard_OfferWrapperBodyTop {
+        flex-wrap: wrap;
+        row-gap: 20px;
+        justify-content: center;
+    }
+
+    .dashboard_OfferWrapperBodyTop div {
+        flex: unset;
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .dashboard_OfferWrapperBodyBottom {
+        padding: 12px 0 20px;
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .dashboard_OfferWrapperBodyBottom h5:nth-of-type(1),
+    .dashboard_OfferWrapperBodyBottom h5:nth-of-type(2) {
+        flex: 1;
+    }
+
+    .dashboard_OfferWrapperBodyBottom h5:nth-of-type(2) {
+        margin-left: 0;
+        text-align: right;
+    }
+
+    .dashboard_OfferWrapperBodyBottom h5:nth-of-type(3) {
+        width: 100%;
+        text-align: right;
+    }
+
+    .dashboard_OfferWrapperBodyBottom h5 i {
+        font-size: 12px;
+    }
+
+    .dashboard_OfferWrapperBodyBtns {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .dashboard_OfferWrapperBodyBtns .main_btn {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .dashboardContentBody.custom_table {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0px;
+    }
+
+    .chat_attachment {
+        right: 0;
+    }
+
+    .dashboardContentBody.custom_table .main_para:nth-child(even) {
+        margin-bottom: 10px;
+    }
+
+    .dashboard_conversations_chatRight {
+        padding-left: 14px;
+    }
+
+    .dashboard_conversations_chatRight h4.main_para {
+        font-size: 13px;
+    }
+
+    .dashboard_conversations_chatRight h4.main_para i {
+        font-size: 10px;
+    }
+
+    .main_para.border-bottom-0.d-flex {
+        flex-wrap: wrap;
+        padding-top: 0;
+        column-gap: 5px;
+    }
+
+    .dashboard_user_status span:nth-of-type(1) {
+        padding-left: 0;
+    }
+
+    .dashboard_user_status {
+        display: inline-flex;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .dashboard_conversations_chatRight h4.main_para {
+        padding: 5px 15px 6px 0;
+    }
+
+    .dashboard_chat_textarea {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .dashboard_chat_textarea .main_btn {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .createOfferHeading {
+        padding: 10px 15px;
+    }
+
+    .dashboard_chat_textareaProp {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .createTicketWrapper {
+        max-width: 100%;
+        margin: 0 auto 20px;
+        padding: 24px;
+    }
+
+    .createTicketWrapper .icon {
+        --iconSize: 40px;
+        font-size: 18px;
+    }
+
+    .dashboard_OfferWrapperHeader {
+        padding: 10px 15px;
+    }
+
+    .dashboard_OfferWrapperHeader h4 {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .dashboard_OfferWrapperBody {
+        padding: 15px;
+    }
+
+    .dashboard_OfferWrapperBodyBottom h5:nth-of-type(1),
+    .dashboard_OfferWrapperBodyBottom h5:nth-of-type(2) {
+        width: 100%;
+        flex: unset;
+        text-align: center;
+    }
+
+    .dashboard_OfferWrapperBodyBottom h5:nth-of-type(3) {
+        text-align: center;
+    }
+
+    .dashboard_OfferWrapperBodyTop div .main_para {
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .dashboard_table:not(.order_details) table td[data-label] {
+        flex-wrap: wrap;
+        row-gap: 5px;
+    }
+
+    .dashboard_table table td {
+        padding-top: 0px !important;
+    }
+
+    .dashboard_table table tr:nth-last-of-type(1) td:nth-last-of-type(1) {
+        padding-bottom: 0px !important;
+    }
+
+    .dashboard_table:not(.order_details) table td[data-label]::before {
+        width: 100%;
+    }
+
+    .dashboard_table:not(.order_details) table tr {
+        margin-bottom: 15px;
+    }
+
+    .dashboard_table table tr:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+
+    .dashboard_user_status span {
+        padding: 0px 7px;
+        font-size: 12px;
+    }
+}
